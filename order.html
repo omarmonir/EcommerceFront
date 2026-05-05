@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="CSS/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css.map" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <!-- Row 1: Header -->
+      <div class="row align-items-center mb-4">
+        <div class="col">
+          <h4 class="fw-bold mb-0">Orders & Fulfillment</h4>
+          <p class="text-muted small mb-0">total orders</p>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-outline-secondary btn-sm px-3">
+            <i class="fa-solid fa-download me-1"></i> Export
+          </button>
+        </div>
+      </div>
+
+      <!-- Row 2: Statistics Cards -->
+      <div class="row g-3 mb-4">
+        <!-- Total Orders -->
+        <div class="col-md-3">
+          <div
+            class="card border-0 shadow-sm p-3 d-flex flex-row align-items-center gap-3"
+          >
+            <div
+              class="p-3 rounded"
+              style="background-color: #fff9db; color: #fcc419"
+            >
+              <i class="fa-solid fa-box fa-lg"></i>
+            </div>
+            <div>
+              <p class="text-muted small mb-0">Total Orders</p>
+              <h5 class="fw-bold mb-0">8</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Pending -->
+        <div class="col-md-3">
+          <div
+            class="card border-0 shadow-sm p-3 d-flex flex-row align-items-center gap-3"
+          >
+            <div
+              class="p-3 rounded"
+              style="background-color: #e7f5ff; color: #339af0"
+            >
+              <i class="fa-solid fa-truck-fast fa-lg"></i>
+            </div>
+            <div>
+              <p class="text-muted small mb-0">Pending</p>
+              <h5 class="fw-bold mb-0">1</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Shipped Today -->
+        <div class="col-md-3">
+          <div
+            class="card border-0 shadow-sm p-3 d-flex flex-row align-items-center gap-3"
+          >
+            <div
+              class="p-3 rounded"
+              style="background-color: #f3f0ff; color: #845ef7"
+            >
+              <i class="fa-solid fa-check-double fa-lg"></i>
+            </div>
+            <div>
+              <p class="text-muted small mb-0">Shipped Today</p>
+              <h5 class="fw-bold mb-0">4</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Total Revenue -->
+        <div class="col-md-3">
+          <div
+            class="card border-0 shadow-sm p-3 d-flex flex-row align-items-center gap-3"
+          >
+            <div
+              class="p-3 rounded"
+              style="background-color: #ebfbee; color: #40c057"
+            >
+              <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+            </div>
+            <div>
+              <p class="text-muted small mb-0">Total Revenue</p>
+              <h5 class="fw-bold mb-0">$120K</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 3: Search & Filters Bar -->
+      <div class="card border-0 shadow-sm p-3 mb-4">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-5">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text bg-white border-end-0 text-muted">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control border-start-0"
+                placeholder="Search by order ID or customer name..."
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select form-select-sm text-muted">
+              <option selected>All Payments</option>
+              <option>Paid</option>
+              <option>Pending</option>
+              <option>Refunded</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select form-select-sm text-muted">
+              <option selected>All Status</option>
+              <option>Shipped</option>
+              <option>Delivered</option>
+              <option>Returned</option>
+              <option>Processing</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <div class="dropdown">
+              <button
+                class="btn btn-sm btn-light border w-100 text-dark fw-semibold dropdown-toggle"
+                type="button"
+                id="orderFiltersDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+              >
+                <i class="fa-solid fa-sliders me-1"></i> More Filters
+              </button>
+
+              <div
+                class="dropdown-menu p-3 shadow-lg border-0"
+                style="min-width: 280px"
+              >
+                <div class="mb-3">
+                  <label class="form-label small fw-bold">Payment Method</label>
+                  <select class="form-select form-select-sm">
+                    <option selected>All Methods</option>
+                    <option>Cash on Delivery</option>
+                    <option>Credit Card</option>
+                    <option>InstaPay</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small fw-bold"
+                    >Order Value (EGP)</label
+                  >
+                  <div class="d-flex gap-2">
+                    <input
+                      type="number"
+                      class="form-control form-control-sm"
+                      placeholder="Min"
+                    />
+                    <input
+                      type="number"
+                      class="form-control form-control-sm"
+                      placeholder="Max"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="btn btn-sm btn-primary w-100 fw-bold"
+                  type="button"
+                >
+                  Apply Filters
+                </button>
+                <button
+                  class="btn btn-sm btn-link w-100 text-decoration-none text-muted small mt-1"
+                  type="reset"
+                >
+                  Reset All
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- table  -->
+
+    <div class="container mt-4">
+      <table class="table align-middle">
+        <thead class="table-light">
+          <tr>
+            <th class="text-muted">Order ID</th>
+            <th class="text-muted">Customer</th>
+            <th class="text-muted">Items</th>
+            <th class="text-muted">Amount</th>
+            <th class="text-muted">Payment</th>
+            <th class="text-muted">Method</th>
+            <th class="text-muted">Fulfillment</th>
+            <th class="text-muted">Date</th>
+            <th class="text-muted">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>ORD-2847</td>
+
+            <td>
+              <div>
+                <div>Rajesh Kumar</div>
+                <small class="text-muted">Mumbai, MH</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">2 Items</span></td>
+
+            <td>$8,500</td>
+
+            <td><span class="badge text-success">Paid</span></td>
+
+            <td class="text-muted">UPI</td>
+
+            <td><span class="badge shipped">Shipped</span></td>
+
+            <td>2024-03-15</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2846</td>
+
+            <td>
+              <div>
+                <div>Priya Sharma</div>
+                <small class="text-muted">Delhi, DL</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">2 Items</span></td>
+
+            <td>$8,500</td>
+
+            <td><span class="badge bg-success">Paid</span></td>
+
+            <td class="text-muted">UPI</td>
+
+            <td><span class="badge text-success">Delivered</span></td>
+
+            <td>2024-03-15</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2845</td>
+
+            <td>
+              <div>
+                <div>Amit Patel</div>
+                <small class="text-muted">Ahmedabad, GJ</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">3 Items</span></td>
+
+            <td>$24,800</td>
+
+            <td><span class="badge bg-warning">Pending</span></td>
+
+            <td class="text-muted">COD</td>
+
+            <td><span class="badge bg-primary">Processing</span></td>
+
+            <td>2024-03-15</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2844</td>
+
+            <td>
+              <div>
+                <div>Sneha Reddy</div>
+                <small class="text-muted">Bangalore, KA</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">1 Item</span></td>
+
+            <td>$8,500</td>
+
+            <td><span class="badge bg-success">Paid</span></td>
+
+            <td class="text-muted">UPI</td>
+
+            <td><span class="badge shipped">Shipped</span></td>
+
+            <td>2024-03-15</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2843</td>
+
+            <td>
+              <div>
+                <div>Vikram Singh</div>
+                <small class="text-muted">Jaipur, RJ</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">2 Items</span></td>
+
+            <td>$16,800</td>
+
+            <td><span class="badge bg-success">Paid</span></td>
+
+            <td class="text-muted">Card</td>
+
+            <td><span class="badge bg-primary">Processing</span></td>
+
+            <td>2024-03-13</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2842</td>
+
+            <td>
+              <div>
+                <div>Anjali Verma</div>
+                <small class="text-muted">Pune, MH</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">4 Items</span></td>
+
+            <td>$38,100</td>
+
+            <td><span class="badge bg-success">Paid</span></td>
+
+            <td class="text-muted">UPI</td>
+
+            <td><span class="badge bg-success">delivered</span></td>
+
+            <td>2024-03-18</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2841</td>
+
+            <td>
+              <div>
+                <div>Suresh Nair</div>
+                <small class="text-muted">Kochi, KL</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">1 Items</span></td>
+
+            <td>$18,500</td>
+
+            <td><span class="badge bg-danger">refunded</span></td>
+
+            <td class="text-muted">Card</td>
+
+            <td><span class="badge bg-danger">returned</span></td>
+
+            <td>2024-03-11</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>ORD-2840</td>
+
+            <td>
+              <div>
+                <div>Deepika Joshi</div>
+                <small class="text-muted">Hyderabad, TG</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">2 Items</span></td>
+
+            <td>$8,500</td>
+
+            <td><span class="badge bg-success">Paid</span></td>
+
+            <td class="text-muted">UPI</td>
+
+            <td><span class="badge bg-success">delivered</span></td>
+
+            <td>2024-03-10</td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+        <div class="text-muted" id="showInfo"></div>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-success" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark num" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark num" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark next" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

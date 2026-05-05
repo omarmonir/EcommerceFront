@@ -1,0 +1,24 @@
+table td {
+  vertical-align: middle;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+table tr {
+  border-bottom: 1px solid #eee;
+}
+
+ul li .next:hover{
+  background-color: aqua;
+}
+ul li .num:hover{
+  background-color: aqua;
+}
+
+.container tr td .shipped{
+  color: blueviolet;
+}

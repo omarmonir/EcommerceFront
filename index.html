@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="CSS/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css.map" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+  </head>
+  <body>
+    <!-- section 1 >> products & export -->
+    <!-- section 2 >> search, filter, status -->
+    <!-- section 3 >> table & showing (next & previous)-->
+
+    <div class="container py-4">
+      <!-- Header Section -->
+      <div class="row mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h2 class="h4 fw-bold mb-0">Products</h2>
+            <p class="text-muted small mb-0">Manage your product inventory</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-light border">
+              <i class="fa-solid fa-download"></i> Export
+            </button>
+            <button
+              class="btn btn-warning text-white"
+              style="background-color: #f39c12"
+            >
+              <i class="fa-solid fa-plus"></i> Add Product
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="row g-3 align-items-center mb-4">
+        <div class="col-md-5">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="fa-solid fa-magnifying-glass text-muted"></i>
+            </span>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control border-start-0"
+              placeholder="Search by title or ID..."
+            />
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-select text-muted">
+            <option selected>All Categories</option>
+            <option value="1">T-Shirts</option>
+            <option value="2">Hoodies</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <select class="form-select text-muted">
+            <option selected>All Status</option>
+            <option value="1">Active</option>
+            <option value="2">Inactive</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button
+              class="btn btn-sm btn-light border w-100 text-dark fw-semibold dropdown-toggle"
+              type="button"
+              id="moreFiltersDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-filter me-1"></i> More Filters
+            </button>
+            <div
+              class="dropdown-menu p-3 shadow-lg border-0"
+              aria-labelledby="moreFiltersDropdown"
+              style="min-width: 250px"
+            >
+              <div class="mb-3">
+                <label class="form-label small fw-bold">Size</label>
+                <select class="form-select form-select-sm">
+                  <option selected>All Sizes</option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+              </div>
+              <button
+                class="btn btn-sm btn-warning w-100 fw-bold"
+                type="button"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <table class="table align-middle">
+        <thead class="table-light">
+          <tr>
+            <th class="text-muted"><input type="checkbox" id="selectAll" /></th>
+            <th class="text-muted">Product</th>
+            <th class="text-muted">Category</th>
+            <th class="text-muted">Price</th>
+            <th class="text-muted">Description</th>
+            <th class="text-muted">Stock</th>
+            <th class="text-muted">Status</th>
+            <th class="text-muted">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Abstract Horizon</div>
+                <small class="text-muted">ART-001</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Canvas Art</span></td>
+
+            <td>$8,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-success">12 Unit</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Ocean Depths</div>
+                <small class="text-muted">ART-002</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Acrylic</span></td>
+
+            <td>$12,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-warning">8 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Urban Dreams</div>
+                <small class="text-muted">ART-003</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Watercolor</span></td>
+
+            <td>$6,800</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-warning">5 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Mountain Serenity</div>
+                <small class="text-muted">ART-004</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Canvas Art</span></td>
+
+            <td>$10,900</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-success">15 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Sunset Boulevard</div>
+                <small class="text-muted">ART-005</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Digital Print</span></td>
+
+            <td>$4,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-danger">Out of Stock</span></td>
+
+            <td>
+              <span class="badge bg-dark-subtle text-dark">Inactive</span>
+            </td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Floral Symphony</div>
+                <small class="text-muted">ART-006</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Watercolor</span></td>
+
+            <td>$7,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-success">20 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+
+              <div>
+                <div>Geometric Patterns</div>
+                <small class="text-muted">ART-007</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Acrylic</span></td>
+
+            <td>$11,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-warning">3 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" class="rowCheck" /></td>
+
+            <td class="d-flex align-items-center gap-2">
+              <div>
+                <img class="rounded" src="Screenshot (71)(1).png " alt="" />
+              </div>
+              <div>
+                <div>Abstract Horizon</div>
+                <small class="text-muted">ART-001</small>
+              </div>
+            </td>
+
+            <td><span class="badge text-dark bg-light">Canvas Art</span></td>
+
+            <td>$14,500</td>
+
+            <td class="text-muted">
+              Premium quality fabric. Comfortable fit and modern design
+            </td>
+
+            <td><span class="badge bg-warning">6 Units</span></td>
+
+            <td><span class="badge bg-success">Active</span></td>
+
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light">👁</button>
+                <button class="btn btn-sm btn-light">⋮</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+        <div class="text-muted" id="showInfo"></div>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-success" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark num" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark num" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-dark next" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
