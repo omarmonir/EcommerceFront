@@ -96,3 +96,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+
+  // Set active link based on current page
+// const activePage = document.body.dataset.active;
+// document.querySelectorAll('#sidev .nav-link').forEach(link => {
+//   link.classList.remove('active');
+//   if (link.dataset.page === activePage) {
+//     link.classList.add('active');
+//   }
+// });
+
+
+
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-link").forEach(link => {
+
+  // remove old active class
+  link.classList.remove("active");
+
+  // add active to current page link
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+
+});
